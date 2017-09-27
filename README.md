@@ -134,7 +134,7 @@ Other Style Guides
   - [2.3](#references--block-scope)<p dir="rtl">به این نکته باید اشاره کرد که هر دوی `let` و `var` دارای خصوصیت block-scope هستند</p>
 
     ```javascript
-    // <p dir="rtl">`const` و `let` فقط در بلاکی که تعریف شده اند قابل دسترسی اند</p>
+    <p dir="rtl">//`const` و `let` فقط در بلاکی که تعریف شده اند قابل دسترسی اند</p>
     {
       let a = 1;
       const b = 1;
