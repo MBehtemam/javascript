@@ -1,4 +1,4 @@
-<div style="direction:rtl">
+<div style="direction:rtl;text-align:right;">
 # Airbnb JavaScript Style Guide() {
 
 *A mostly reasonable approach to JavaScript*
