@@ -59,8 +59,8 @@ Other Style Guides
 
 ## Types
 
-  <a name="types--primitives"></a><a name="1.1"></a>
-  - [1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.
+  <span dir="rtl"><a name="types--primitives"></a><a name="1.1"></a>
+  - [1.1](#types--primitives) **Primitives**: When you access a primitive type you work directly on its value.</span>
 
     - `string`
     - `number`
@@ -88,7 +88,9 @@ Other Style Guides
 </span>
 >>>>>>> 1dd53c9a59b6fc1f36e2ac3effdce31d4db25f41
 =======
+  <a name="types--complex"></a><a name="1.2"></a>
   - [1.2](#types--complex)  **Complex**: When you access a complex type you work on a reference to its value.
+
 >>>>>>> d179368a6b6852c09a1383a4ae9291844fbb4772
     - `object`
     - `array`
