@@ -112,18 +112,18 @@ Other Style Guides
     ```
 
   <a name="references--disallow-var"></a><a name="2.2"></a>
-  - [2.2](#references--disallow-var) If you must reassign references, use `let` instead of `var`. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
+  - [2.2](#references--disallow-var) <p dir="rtl">اگر نیاز است که یک ارجاع را دوباره مقدار دهی کنید از `let` بجای `var` استفاده کنید</p>. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
 
-    > Why? `let` is block-scoped rather than function-scoped like `var`.
+    > <p dir="rtl">چرا؟ برای اینکه `let` دارای خصوصیت block-scoped است در حالی که `var` دارای خصوصیت function-scoped است</p>
 
     ```javascript
-    // bad
+    // بد
     var count = 1;
     if (true) {
       count += 1;
     }
 
-    // good, use the let.
+    // خوب
     let count = 1;
     if (true) {
       count += 1;
@@ -131,10 +131,10 @@ Other Style Guides
     ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
-  - [2.3](#references--block-scope) Note that both `let` and `const` are block-scoped.
+  - [2.3](#references--block-scope)<p dir="rtl">به این نکته باید اشاره کرد که هر دوی `let` و `var` دارای خصوصیت block-scope هستند</p>
 
     ```javascript
-    // const and let only exist in the blocks they are defined in.
+    // <p dir="rtl">`const` و `let` فقط در بلاکی که تعریف شده اند قابل دسترسی اند</p>
     {
       let a = 1;
       const b = 1;
