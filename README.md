@@ -78,13 +78,9 @@ Other Style Guides
     console.log(foo, bar); // => 1, 9
     ```
 
-  <a name="types--complex"></a><a name="1.2"></a>
-<<<<<<< HEAD
-  -<span style="direction:rtl;text-align:right"> [1.2](#types--complex)  **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
+  <span style="direction:rtl;text-align:right"><a name="types--complex"></a><a name="1.2"></a>
+  - [1.2](#types--complex)  **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
 </span>
-=======
-  - [1.2](#types--complex) **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
->>>>>>> 45c15246cd400a1798b256dbd8479f5d35e4ebc6
     - `object`
     - `array`
     - `function`
