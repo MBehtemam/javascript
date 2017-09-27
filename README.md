@@ -78,6 +78,7 @@ Other Style Guides
     ```
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   <a name="types--complex"></a><a name="1.2"></a>
   - [1.2](#types--complex)  **Complex**: When you access a complex type you work on a reference to its value.
 
@@ -86,6 +87,9 @@ Other Style Guides
   - [1.2](#types--complex)  **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
 </span>
 >>>>>>> 1dd53c9a59b6fc1f36e2ac3effdce31d4db25f41
+=======
+  - [1.2](#types--complex)  **Complex**: When you access a complex type you work on a reference to its value.
+>>>>>>> d179368a6b6852c09a1383a4ae9291844fbb4772
     - `object`
     - `array`
     - `function`
