@@ -1,4 +1,4 @@
-<p style="direction:rtl;text-align:right;">
+
 # Airbnb JavaScript Style Guide() {
 
 *A mostly reasonable approach to JavaScript*
@@ -79,8 +79,12 @@ Other Style Guides
     ```
 
   <a name="types--complex"></a><a name="1.2"></a>
+<<<<<<< HEAD
   -<span style="direction:rtl;text-align:right"> [1.2](#types--complex)  **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
 </span>
+=======
+  - [1.2](#types--complex) **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
+>>>>>>> 45c15246cd400a1798b256dbd8479f5d35e4ebc6
     - `object`
     - `array`
     - `function`
@@ -99,7 +103,7 @@ Other Style Guides
 ## ارجاع ها
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
-  - [2.1](#references--prefer-const) از `const` برای ارجاع ها استفاده کنید و از `var` پرهیز کنید. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
+  - [2.1](#references--prefer-const)<p dir="rtl"> از `const` برای ارجاع ها استفاده کنید و از `var` پرهیز کنید. </p>eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
 
     > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
 
