@@ -131,9 +131,11 @@ Other Style Guides
     ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
-  - [2.3](#references--block-scope)<p dir="rtl">به این نکته باید اشاره کرد که هر دوی `let` و `var` دارای خصوصیت block-scope هستند</p>
-  <p dir="rtl">`const` و `let` فقط در بلاکی که تعریف شده اند وجود دارند</p>
-
+  - [2.3](#references--block-scope)<p dir="rtl">به این نکته باید اشاره کرد که هر دوی `let` و `var` دارای خصوصیت block-scope هستند
+  <br/>
+  `const` و `let` فقط در بلاکی که تعریف شده اند وجود دارند
+  </p>
+  
     ```javascript
     // const and let only exist in the blocks they are defined in.
     {
