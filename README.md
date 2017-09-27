@@ -319,37 +319,37 @@ Other Style Guides
 
 **[⬆ back to top](#table-of-contents)**
 
-## Arrays
+## آرایه ها
 
   <a name="arrays--literals"></a><a name="4.1"></a>
-  - [4.1](#arrays--literals) Use the literal syntax for array creation. eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor.html)
+  - [4.1](#arrays--literals) <p dir="rtl">برای ساخت آرایه از قاعده literal استفاده کنید</p> eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor.html)
 
     ```javascript
-    // bad
+    // بد
     const items = new Array();
 
-    // good
+    // خوب
     const items = [];
     ```
 
   <a name="arrays--push"></a><a name="4.2"></a>
-  - [4.2](#arrays--push) Use [Array#push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) instead of direct assignment to add items to an array.
+  - [4.2](#arrays--push) <p dir="rtl">بجای اینکه مستقیما  آرایه را مقدار دهی کنید از [Array#push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) استفاده کنید</p>
 
     ```javascript
     const someStack = [];
 
-    // bad
+    // بد
     someStack[someStack.length] = 'abracadabra';
 
-    // good
+    // خوب
     someStack.push('abracadabra');
     ```
 
   <a name="es6-array-spreads"></a><a name="4.3"></a>
-  - [4.3](#es6-array-spreads) Use array spreads `...` to copy arrays.
+  - [4.3](#es6-array-spreads)<p dir="rtl">برای کپی کردن آرایه ها از `...` ( array spreads) استفاده کنید</p>
 
     ```javascript
-    // bad
+    // بد
     const len = items.length;
     const itemsCopy = [];
     let i;
@@ -358,20 +358,20 @@ Other Style Guides
       itemsCopy[i] = items[i];
     }
 
-    // good
+    // خوب
     const itemsCopy = [...items];
     ```
 
   <a name="arrays--from"></a><a name="4.4"></a>
-  - [4.4](#arrays--from) To convert an array-like object to an array, use spreads `...` instead of [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from).
+  - [4.4](#arrays--from) <p dir="rtl">برای تبدیل آرایه شبه شی (array-like object) به ارایه بجای استفاده از [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) از `...` استفاده کنید.</p>.
 
     ```javascript
     const foo = document.querySelectorAll('.foo');
 
-    // good
+    // خوب
     const nodes = Array.from(foo);
 
-    // best
+    // عالی
     const nodes = [...foo];
     ```
 
