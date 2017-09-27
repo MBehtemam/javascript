@@ -376,37 +376,37 @@ Other Style Guides
     ```
 
   <a name="arrays--mapping"></a>
-  - [4.5](#arrays--mapping) Use [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) instead of spread `...` for mapping over iterables, because it avoids creating an intermediate array.
+  - [4.5](#arrays--mapping) <p dir="rtl">برای map کردن یک آرایه بجای استفاده از `...` از Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) استفاده کنید چرا که باعث می شود از ایجاد یک آرایه میانی جلوگیری کند</p>
 
     ```javascript
-    // bad
+    // بد
     const bar = [...foo].map(bar);
 
-    // good
+    // خوب
     const bar = Array.from(foo, bar);
     ```
 
   <a name="arrays--callback-return"></a><a name="4.5"></a>
-  - [4.6](#arrays--callback-return) Use return statements in array method callbacks. It’s ok to omit the return if the function body consists of a single statement returning an expression without side effects, following [8.2](#arrows--implicit-return). eslint: [`array-callback-return`](http://eslint.org/docs/rules/array-callback-return)
+  - [4.6](#arrays--callback-return) <p dir="rtl">از `return` در callback متد آرایه استفاده کنید. این کار باعث جلوگیری از side effect می شود. مطالعه بیشتر [8.2](#arrows--implicit-return)</p>. eslint: [`array-callback-return`](http://eslint.org/docs/rules/array-callback-return)
 
     ```javascript
-    // good
+    // خوب
     [1, 2, 3].map((x) => {
       const y = x + 1;
       return x * y;
     });
 
-    // good
+    // خوب
     [1, 2, 3].map(x => x + 1);
 
-    // bad
+    // بد
     const flat = {};
     [[0, 1], [2, 3], [4, 5]].reduce((memo, item, index) => {
       const flatten = memo.concat(item);
       flat[index] = flatten;
     });
 
-    // good
+    // خوب
     const flat = {};
     [[0, 1], [2, 3], [4, 5]].reduce((memo, item, index) => {
       const flatten = memo.concat(item);
@@ -414,7 +414,7 @@ Other Style Guides
       return flatten;
     });
 
-    // bad
+    // بد
     inbox.filter((msg) => {
       const { subject, author } = msg;
       if (subject === 'Mockingbird') {
@@ -424,7 +424,7 @@ Other Style Guides
       }
     });
 
-    // good
+    // خوب
     inbox.filter((msg) => {
       const { subject, author } = msg;
       if (subject === 'Mockingbird') {
@@ -436,10 +436,10 @@ Other Style Guides
     ```
 
   <a name="arrays--bracket-newline"></a>
-  - [4.7](#arrays--bracket-newline) Use line breaks after open and before close array brackets if an array has multiple lines
+  - [4.7](#arrays--bracket-newline) <p dir="rtl">اگر آرایه دارای چندین خط است می توانید بعد از بازکردن براکت و قبل از بستن براکت یک خط جدید ایجاد کنید</p>
 
   ```javascript
-  // bad
+  // بد
   const arr = [
     [0, 1], [2, 3], [4, 5],
   ];
@@ -454,7 +454,7 @@ Other Style Guides
     1, 2,
   ];
 
-  // good
+  // خوب
   const arr = [[0, 1], [2, 3], [4, 5]];
 
   const objectInArray = [
