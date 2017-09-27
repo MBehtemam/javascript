@@ -1,4 +1,4 @@
-<p style="direction:rtl;text-align:right;">
+
 # Airbnb JavaScript Style Guide() {
 
 *A mostly reasonable approach to JavaScript*
@@ -79,8 +79,7 @@ Other Style Guides
     ```
 
   <a name="types--complex"></a><a name="1.2"></a>
-  - [1.2](#types--complex) <p dir="rtl"> **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
-</p>
+  - [1.2](#types--complex) <p dir="rtl"> **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید</p>
     - `object`
     - `array`
     - `function`
