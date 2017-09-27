@@ -143,7 +143,6 @@ Other Style Guides
     console.log(a); // ReferenceError
     console.log(b); // ReferenceError
     ```
-
 **[⬆ back to top](#table-of-contents)**
 
 ## Objects
