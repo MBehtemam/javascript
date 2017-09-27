@@ -132,9 +132,9 @@ Other Style Guides
 
   <a name="references--block-scope"></a><a name="2.3"></a>
   - [2.3](#references--block-scope)<p dir="rtl">به این نکته باید اشاره کرد که هر دوی `let` و `var` دارای خصوصیت block-scope هستند</p>
-
+<p dir="rtl">
     ```javascript
-    <p dir="rtl">//`const` و `let` فقط در بلاکی که تعریف شده اند قابل دسترسی اند</p>
+    //`const` و `let` فقط در بلاکی که تعریف شده اند قابل دسترسی اند
     {
       let a = 1;
       const b = 1;
@@ -142,7 +142,7 @@ Other Style Guides
     console.log(a); // ReferenceError
     console.log(b); // ReferenceError
     ```
-
+</p>
 **[⬆ back to top](#table-of-contents)**
 
 ## Objects
