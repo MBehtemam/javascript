@@ -79,8 +79,8 @@ Other Style Guides
     ```
 
   <a name="types--complex"></a><a name="1.2"></a>
-  - [1.2](#types--complex) <p dir="rtl"> **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
-</p>
+  -<span style="direction:rtl;text-align:right"> [1.2](#types--complex)  **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
+</span>
     - `object`
     - `array`
     - `function`
