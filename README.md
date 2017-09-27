@@ -59,7 +59,7 @@ Other Style Guides
 
 ## Types
  <a name="types--primitives"></a><a name="1.1"></a>
-  -[1.1](#types--primitives)  <p dir="rtl">**Primitives**: When you access a primitive type you work directly on its value.</p>
+  -[1.1](#types--primitives)**Primitives**: <p dir="rtl">When you access a primitive type you work directly on its value.</p>
 
     - `string`
     - `number`
