@@ -79,7 +79,7 @@ Other Style Guides
     ```
 
   <a name="types--complex"></a><a name="1.2"></a>
-  - [1.2](#types--complex)  **Complex**: When you access a complex type you work on a reference to its value.
+  - [1.2](#types--complex)  **نوع های پیچیده**: وقتی شما بر روی نوع های پیچیده کار می کنید  در واقع بر روی ارجاعی به مقادیر آن کار می کنید
 
     - `object`
     - `array`
@@ -96,19 +96,19 @@ Other Style Guides
 
 **[⬆ back to top](#table-of-contents)**
 
-## References
+## ارجاع ها
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
-  - [2.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
+  - [2.1](#references--prefer-const) از `const` برای ارجاع ها استفاده کنید و از `var` پرهیز کنید. eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
 
     > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
 
     ```javascript
-    // bad
+    // بد
     var a = 1;
     var b = 2;
 
-    // good
+    // خوب
     const a = 1;
     const b = 2;
     ```
