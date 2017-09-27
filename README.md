@@ -145,16 +145,16 @@ Other Style Guides
 
 **[⬆ back to top](#table-of-contents)**
 
-## Objects
+## اشیاء
 
   <a name="objects--no-new"></a><a name="3.1"></a>
-  - [3.1](#objects--no-new) Use the literal syntax for object creation. eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html)
+  - [3.1](#objects--no-new)<p dir="rtl"> برای ساخت اشیاء از قائده literal استفاده کنید</p> eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html)
 
     ```javascript
-    // bad
+    // بد
     const item = new Object();
 
-    // good
+    // خوب
     const item = {};
     ```
 
@@ -185,10 +185,10 @@ Other Style Guides
     ```
 
   <a name="es6-object-shorthand"></a><a name="3.5"></a>
-  - [3.3](#es6-object-shorthand) Use object method shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
+  - [3.3](#es6-object-shorthand) <p dir="rtl">در اشیاء از متدهای shorthand استفاده کنید</p> eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
 
     ```javascript
-    // bad
+    // بد
     const atom = {
       value: 1,
 
@@ -197,7 +197,7 @@ Other Style Guides
       },
     };
 
-    // good
+    // خوب
     const atom = {
       value: 1,
 
@@ -210,32 +210,32 @@ Other Style Guides
   <a name="es6-object-concise"></a><a name="3.6"></a>
   - [3.4](#es6-object-concise) Use property value shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
 
-    > Why? It is shorter to write and descriptive.
+    ><p dir="rtl">چرا؟زیرا برای نوشتن کوتاه تر است همچین توصیفی تر نیز است</p>
 
     ```javascript
     const lukeSkywalker = 'Luke Skywalker';
 
-    // bad
+    // بد
     const obj = {
       lukeSkywalker: lukeSkywalker,
     };
 
-    // good
+    // خوب
     const obj = {
       lukeSkywalker,
     };
     ```
 
   <a name="objects--grouped-shorthand"></a><a name="3.7"></a>
-  - [3.5](#objects--grouped-shorthand) Group your shorthand properties at the beginning of your object declaration.
+  - [3.5](#objects--grouped-shorthand) <p dir="rtl">خصوصیات shorthand را در اول شی تعریف کنید</p>
 
-    > Why? It’s easier to tell which properties are using the shorthand.
+    > <p dir="rtl">چرا؟ زیرا راحت تر است که مشخص کنیم کدام خصوصیت ها از shorthand استفاده کرده اند</p>
 
     ```javascript
     const anakinSkywalker = 'Anakin Skywalker';
     const lukeSkywalker = 'Luke Skywalker';
 
-    // bad
+    // بد
     const obj = {
       episodeOne: 1,
       twoJediWalkIntoACantina: 2,
@@ -245,7 +245,7 @@ Other Style Guides
       anakinSkywalker,
     };
 
-    // good
+    // خوب
     const obj = {
       lukeSkywalker,
       anakinSkywalker,
@@ -257,19 +257,19 @@ Other Style Guides
     ```
 
   <a name="objects--quoted-props"></a><a name="3.8"></a>
-  - [3.6](#objects--quoted-props) Only quote properties that are invalid identifiers. eslint: [`quote-props`](http://eslint.org/docs/rules/quote-props.html) jscs: [`disallowQuotedKeysInObjects`](http://jscs.info/rule/disallowQuotedKeysInObjects)
+  - [3.6](#objects--quoted-props) <p dir="rtl">فقط خصوصیاتی که دارای نام نامعتبر می باشند را در qoute بگذارید</p>. eslint: [`quote-props`](http://eslint.org/docs/rules/quote-props.html) jscs: [`disallowQuotedKeysInObjects`](http://jscs.info/rule/disallowQuotedKeysInObjects)
 
     > Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
 
     ```javascript
-    // bad
+    // بد
     const bad = {
       'foo': 3,
       'bar': 4,
       'data-blah': 5,
     };
 
-    // good
+    // خوب
     const good = {
       foo: 3,
       bar: 4,
@@ -278,20 +278,20 @@ Other Style Guides
     ```
 
   <a name="objects--prototype-builtins"></a>
-  - [3.7](#objects--prototype-builtins) Do not call `Object.prototype` methods directly, such as `hasOwnProperty`, `propertyIsEnumerable`, and `isPrototypeOf`.
+  - [3.7](#objects--prototype-builtins) <p dir="rtl">متد های که در `Object.prototype` وجود دارند مثل `hasOwnProperty`,`propertyIsEnumerable`,`isPrototypeOf` هستند را بصورت مستقیم فراخوانی نکنید</p>
 
-    > Why? These methods may be shadowed by properties on the object in question - consider `{ hasOwnProperty: false }` - or, the object may be a null object (`Object.create(null)`).
+    > <p dir="rtl">چرا؟ این متدها ممکن است تحت تاثیر خصوصیات موجود در شی قرار بگیرند.شی دارای خصوصیتی مثل`{ hasOwnProperty:false }` یا شی یک شی null باشید (`Object.create(null)`)</p>
 
     ```javascript
-    // bad
+    // بد
     console.log(object.hasOwnProperty(key));
 
-    // good
+    // خوب
     console.log(Object.prototype.hasOwnProperty.call(object, key));
 
-    // best
+    // عالی
     const has = Object.prototype.hasOwnProperty; // cache the lookup once, in module scope.
-    /* or */
+    /* یا */
     import has from 'has';
     // ...
     console.log(has.call(object, key));
