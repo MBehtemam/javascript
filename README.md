@@ -280,7 +280,7 @@ Other Style Guides
   <a name="objects--prototype-builtins"></a>
   - [3.7](#objects--prototype-builtins) <p dir="rtl">متد های که در `Object.prototype` وجود دارند مثل `hasOwnProperty`,`propertyIsEnumerable`,`isPrototypeOf` هستند را بصورت مستقیم فراخوانی نکنید</p>
 
-    > <p dir="rtl">چرا؟ این متدها ممکن است تحت تاثیر خصوصیات موجود در شی قرار بگیرند.شی دارای خصوصیتی مثل`{ hasOwnProperty:false }` یا شی یک شی null باشید (`Object.create(null)`)</p>
+    > <p dir="rtl">چرا؟ این متدها ممکن است تحت تاثیر خصوصیات موجود در شی قرار بگیرند .مثلا اگر شی دارای خصوصیتی مثل `{ hasOwnProperty:false}` باشد یا یک شی null باشد (`(Object.create(null)`)</p>
 
     ```javascript
     // بد
