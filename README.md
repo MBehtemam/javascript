@@ -477,12 +477,12 @@ Other Style Guides
 ## Destructuring
 
   <a name="destructuring--object"></a><a name="5.1"></a>
-  - [5.1](#destructuring--object) Use object destructuring when accessing and using multiple properties of an object. jscs: [`requireObjectDestructuring`](http://jscs.info/rule/requireObjectDestructuring)
+  - [5.1](#destructuring--object)<p dir="rtl"> زمانی که می خواهید به چندین خصوصیت یک شی دسترسی داشته باشید از obect destructuring استفاده کنید</p> jscs: [`requireObjectDestructuring`](http://jscs.info/rule/requireObjectDestructuring)
 
-    > Why? Destructuring saves you from creating temporary references for those properties.
+    > <p dir="rtl">چرا؟ Destructuring باعث می شود دیگر نیاز نباشد برای هر خصوصیت شی یک ارجاع موقتی (متغییر) بسازید</p>
 
     ```javascript
-    // bad
+    // بد
     function getFullName(user) {
       const firstName = user.firstName;
       const lastName = user.lastName;
@@ -490,54 +490,54 @@ Other Style Guides
       return `${firstName} ${lastName}`;
     }
 
-    // good
+    // خوب
     function getFullName(user) {
       const { firstName, lastName } = user;
       return `${firstName} ${lastName}`;
     }
 
-    // best
+    // عالی
     function getFullName({ firstName, lastName }) {
       return `${firstName} ${lastName}`;
     }
     ```
 
   <a name="destructuring--array"></a><a name="5.2"></a>
-  - [5.2](#destructuring--array) Use array destructuring. jscs: [`requireArrayDestructuring`](http://jscs.info/rule/requireArrayDestructuring)
+  - [5.2](#destructuring--array) <p dir="rtl">استفاده از destructuring بر روی آرایه ها</p> jscs: [`requireArrayDestructuring`](http://jscs.info/rule/requireArrayDestructuring)
 
     ```javascript
     const arr = [1, 2, 3, 4];
 
-    // bad
+    // بد
     const first = arr[0];
     const second = arr[1];
 
-    // good
+    // خوب
     const [first, second] = arr;
     ```
 
   <a name="destructuring--object-over-array"></a><a name="5.3"></a>
-  - [5.3](#destructuring--object-over-array) Use object destructuring for multiple return values, not array destructuring. jscs: [`disallowArrayDestructuringReturn`](http://jscs.info/rule/disallowArrayDestructuringReturn)
+  - [5.3](#destructuring--object-over-array) <p dir="rtl">زمانی که می خواهید چندین مقدار را برگردانید از حالت object destructuring استفاده کنید و از حالت آرایه ای آن یعنی arry destructuring استفاده نکنید<p> jscs: [`disallowArrayDestructuringReturn`](http://jscs.info/rule/disallowArrayDestructuringReturn)
 
-    > Why? You can add new properties over time or change the order of things without breaking call sites.
+    ><p dir="rtl">چرا؟چون به راحتی می توانید خصوصیات جدید اضافه کنید بدون اینکه نگران نظم قرار گیری چیزها باشید چون در آرایه مکان قرارگیری چیزها مهم است و نیاز نیست فراخوان را نیز تغییر دهید</p>
 
     ```javascript
-    // bad
+    // بد
     function processInput(input) {
-      // then a miracle occurs
+      //معجزه رخ می هده :)
       return [left, right, top, bottom];
     }
 
-    // the caller needs to think about the order of return data
+    // فراخوان باید در مورد ترتیب قرارگیری چیزها فکر کند
     const [left, __, top] = processInput(input);
 
-    // good
+    // خوب
     function processInput(input) {
-      // then a miracle occurs
+      // معجزه رخ می دهد
       return { left, right, top, bottom };
     }
 
-    // the caller selects only the data they need
+    // فراخوان فقط چیزهایی که نیاز دارد را انتخاب می کند
     const { left, top } = processInput(input);
     ```
 
