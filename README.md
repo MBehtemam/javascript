@@ -57,7 +57,7 @@ Other Style Guides
   1. [Contributors](#contributors)
   1. [License](#license)
 
-## Types
+## <span dir="rtl">Types</span>
  <a name="types--primitives"></a><a name="1.1"></a>
   -[1.1](#types--primitives)**نوع های اولیه**: <p dir="rtl">وقتی به نوع های  اولیه دسترسی دارید بر روی مقادیر آنها کار می کنید</p>
 
@@ -626,7 +626,7 @@ Other Style Guides
 
 **[⬆ back to top](#table-of-contents)**
 
-## Functions
+## توابع
 
   <a name="functions--declarations"></a><a name="7.1"></a>
   - [7.1](#functions--declarations) Use named function expressions instead of function declarations. eslint: [`func-style`](http://eslint.org/docs/rules/func-style) jscs: [`disallowFunctionDeclarations`](http://jscs.info/rule/disallowFunctionDeclarations)
