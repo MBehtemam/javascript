@@ -631,29 +631,29 @@ Other Style Guides
   <a name="functions--declarations"></a><a name="7.1"></a>
   - [7.1](#functions--declarations) <p dir="rtl" align="right">بجای تعریف توابع از حالت function name expression ها استفاده کنید<p> eslint: [`func-style`](http://eslint.org/docs/rules/func-style) jscs: [`disallowFunctionDeclarations`](http://jscs.info/rule/disallowFunctionDeclarations)
 
-    > <p dir="rtl" align="right">چرا؟</p> ([Discussion](https://github.com/airbnb/javascript/issues/794))
+    > <p dir="rtl" align="right">چرا؟ زیرا توابع در جاوا اسکریپت بصورت hosited هستند به معنی اینکه می توان قبل از تعریف یک تابع به آن ارجاع داشت . درست مانند اینکه قبل از اینکه یک متغییر را تعریف کنید از آن استفاده کنید.و این باعث عدم خوانایی و کاهش نگهداری کد می شود.اگر متوجه شدید که تابع به اندازه ای پیچیده و بزرگ شده است که باعث می شود به راحتی خیلی از قسمت های آنرا متوجه نشد شاید وقت آن است که تابع را به یک ماژول تبدیل کنید.فراموش نکنید که از توابع نام دار استفاده کنید چرا که پیدا کردن خطاهای تابع های بدون نام در Error's call stack سخت است</p> ([Discussion](https://github.com/airbnb/javascript/issues/794))
 
     ```javascript
-    // bad
+    // بد
     function foo() {
       // ...
     }
 
-    // bad
+    // بد
     const foo = function () {
       // ...
     };
 
-    // good
+    // خوب
     const foo = function bar() {
       // ...
     };
     ```
 
   <a name="functions--iife"></a><a name="7.2"></a>
-  - [7.2](#functions--iife) Wrap immediately invoked function expressions in parentheses. eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife.html) jscs: [`requireParenthesesAroundIIFE`](http://jscs.info/rule/requireParenthesesAroundIIFE)
+  - [7.2](#functions--iife) <p dir="rtl" align="right">توابعی که سریعا پس از تعریف فراخوانی می شوند (immediately invoked function) را در یک پرانتز قرار دهید</p>eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife.html) jscs: [`requireParenthesesAroundIIFE`](http://jscs.info/rule/requireParenthesesAroundIIFE)
 
-    > Why? An immediately invoked function expression is a single unit - wrapping both it, and its invocation parens, in parens, cleanly expresses this. Note that in a world with modules everywhere, you almost never need an IIFE.
+    > <p dir="rtl" align="right">چرا؟ این نوع توابع در واقع یک واحد تنها (single unit) هستند و قرار دادن آنها در پرانتز به خوبی آنها را نشان می دهد. همچنین در جایی که ماژول ها هستند دیگر نیازی به استفاده از IIFE نیست</p>
 
     ```javascript
     // immediately-invoked function expression (IIFE)
@@ -663,20 +663,20 @@ Other Style Guides
     ```
 
   <a name="functions--in-blocks"></a><a name="7.3"></a>
-  - [7.3](#functions--in-blocks) Never declare a function in a non-function block (`if`, `while`, etc). Assign the function to a variable instead. Browsers will allow you to do it, but they all interpret it differently, which is bad news bears. eslint: [`no-loop-func`](http://eslint.org/docs/rules/no-loop-func.html)
+  - [7.3](#functions--in-blocks) <p dir="rtl" align="right">هیچ وقت توابع را در بلاک های غیر تابعی مانند `if` یا `else` و از این نمونه بلاک ها تعریف نکنید و بجای اینکار توابع را به یک متغیر انتصاب دهید.مرورگرها اجازه این کار را می دهند اما خبر بد این است که هر کدام رفتار متفاوتی در برخورد با اینگونه توابع دارند.</p> eslint: [`no-loop-func`](http://eslint.org/docs/rules/no-loop-func.html)
 
   <a name="functions--note-on-blocks"></a><a name="7.4"></a>
-  - [7.4](#functions--note-on-blocks) **Note:** ECMA-262 defines a `block` as a list of statements. A function declaration is not a statement. [Read ECMA-262’s note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
+  - [7.4](#functions--note-on-blocks) **Note:** <p dir="rtl" align="right">در ECMA-262 `block` ها را به عنوان لیستی از stateent ها می داند اما تعریف تابع یک stateent نیست</p>[Read ECMA-262’s note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
     ```javascript
-    // bad
+    // بد
     if (currentUser) {
       function test() {
         console.log('Nope.');
       }
     }
 
-    // good
+    // خوب
     let test;
     if (currentUser) {
       test = () => {
@@ -686,15 +686,15 @@ Other Style Guides
     ```
 
   <a name="functions--arguments-shadow"></a><a name="7.5"></a>
-  - [7.5](#functions--arguments-shadow) Never name a parameter `arguments`. This will take precedence over the `arguments` object that is given to every function scope.
+  - [7.5](#functions--arguments-shadow) <p dir="rtl" align="right">بطور پیش فرض به هر تابع یک شی با نام `arguments` پاس داده می شود بنابراین نام هیچ پارامتری را `arguments` نگذارید چرا که باعث تداخل می شود.</p>
 
     ```javascript
-    // bad
+    // بد
     function foo(name, options, arguments) {
       // ...
     }
 
-    // good
+    // خوب
     function foo(name, options, args) {
       // ...
     }
@@ -719,10 +719,10 @@ Other Style Guides
     ```
 
   <a name="es6-default-parameters"></a><a name="7.7"></a>
-  - [7.7](#es6-default-parameters) Use default parameter syntax rather than mutating function arguments.
+  - [7.7](#es6-default-parameters) <p dir="rtl" align="right">بجای mutate کردن آرگومان های تابع از مقادیر پیش فرض استفاده کنید</p>
 
     ```javascript
-    // really bad
+    // خیلی بد
     function handleThings(opts) {
       // No! We shouldn’t mutate function arguments.
       // Double bad: if opts is falsy it'll be set to an object which may
@@ -731,7 +731,7 @@ Other Style Guides
       // ...
     }
 
-    // still bad
+    // هنوز بد است
     function handleThings(opts) {
       if (opts === void 0) {
         opts = {};
@@ -739,20 +739,20 @@ Other Style Guides
       // ...
     }
 
-    // good
+    // خوب
     function handleThings(opts = {}) {
       // ...
     }
     ```
 
   <a name="functions--default-side-effects"></a><a name="7.8"></a>
-  - [7.8](#functions--default-side-effects) Avoid side effects with default parameters.
+  - [7.8](#functions--default-side-effects) <p dir="rtl" algin="right">از side effect ها بر روی پارامتر های پیش فرض بپرهیزید</p>
 
-    > Why? They are confusing to reason about.
+    > <p dir="rtl" align="right">چرا؟ پیدا کردن مشکل ممکن است سخت شود</p>
 
     ```javascript
     var b = 1;
-    // bad
+    // بد
     function count(a = b++) {
       console.log(a);
     }
@@ -763,35 +763,35 @@ Other Style Guides
     ```
 
   <a name="functions--defaults-last"></a><a name="7.9"></a>
-  - [7.9](#functions--defaults-last) Always put default parameters last.
+  - [7.9](#functions--defaults-last) <p dir="rtl" align="right">همیشه پارامترهای دارای مقادیر پیش فرض را در آخر بیاورید</p>
 
     ```javascript
-    // bad
+    // بد
     function handleThings(opts = {}, name) {
       // ...
     }
 
-    // good
+    // خوب
     function handleThings(name, opts = {}) {
       // ...
     }
     ```
 
   <a name="functions--constructor"></a><a name="7.10"></a>
-  - [7.10](#functions--constructor) Never use the Function constructor to create a new function. eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
+  - [7.10](#functions--constructor) <p dir="rtl" align="right">برای ساختن یک تابع هیچ وقت از function constructor استفاده نکنید.</p> eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
 
-    > Why? Creating a function in this way evaluates a string similarly to eval(), which opens vulnerabilities.
+    > <p dir="rtl" align="right">ساخت توابع با استفاده از این روش مانند استفاده از تابع eval() است که باعث مشکلات زیادی میشود</p>
 
     ```javascript
-    // bad
+    // بد
     var add = new Function('a', 'b', 'return a + b');
 
-    // still bad
+    // هنوز بد
     var subtract = Function('a', 'b', 'return a - b');
     ```
 
   <a name="functions--signature-spacing"></a><a name="7.11"></a>
-  - [7.11](#functions--signature-spacing) Spacing in a function signature. eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren) [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
+  - [7.11](#functions--signature-spacing) <p dir="rtl" align="right">فاصله در تعریف توابع</p> eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren) [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
 
     > Why? Consistency is good, and you shouldn’t have to add or remove a space when adding or removing a name.
 
@@ -807,29 +807,29 @@ Other Style Guides
     ```
 
   <a name="functions--mutate-params"></a><a name="7.12"></a>
-  - [7.12](#functions--mutate-params) Never mutate parameters. eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
+  - [7.12](#functions--mutate-params)<p dir="rtl" align="right">هیچ وقت توابع را mutate نکنید</p> eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
 
-    > Why? Manipulating objects passed in as parameters can cause unwanted variable side effects in the original caller.
+    > <p dir="rtl" align="right">چرا ؟ تغییر پارامتر های شی پاس داده شده به عنوان پارامتر ممکن است باعث side effect در فراخوان اصلی شود</p>
 
     ```javascript
-    // bad
+    // بد
     function f1(obj) {
       obj.key = 1;
     }
 
-    // good
+    // خوب
     function f2(obj) {
       const key = Object.prototype.hasOwnProperty.call(obj, 'key') ? obj.key : 1;
     }
     ```
 
   <a name="functions--reassign-params"></a><a name="7.13"></a>
-  - [7.13](#functions--reassign-params) Never reassign parameters. eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
+  - [7.13](#functions--reassign-params)<p dir="rtl" align="right">هیچ وقت پارامترها را دوباره مقدار دهی نکنید</p> eslint: [`no-param-reassign`](http://eslint.org/docs/rules/no-param-reassign.html)
 
-    > Why? Reassigning parameters can lead to unexpected behavior, especially when accessing the `arguments` object. It can also cause optimization issues, especially in V8.
+    > <p dir="rtl" align="right">چرا؟ مقدار دهی دوباره پارامتر ها ممکن است باعث رفتارهای غیرقابل پیش بینی شود مخصوصا اگر به شی `arguments` دسترسی داشته باشید همچین ممکن است باعث مشکلات بهینه بودن شود بخصوص در موتور V8</p>
 
     ```javascript
-    // bad
+    // بد
     function f1(a) {
       a = 1;
       // ...
@@ -840,7 +840,7 @@ Other Style Guides
       // ...
     }
 
-    // good
+    // خوب
     function f3(a) {
       const b = a || 1;
       // ...
@@ -852,38 +852,38 @@ Other Style Guides
     ```
 
   <a name="functions--spread-vs-apply"></a><a name="7.14"></a>
-  - [7.14](#functions--spread-vs-apply) Prefer the use of the spread operator `...` to call variadic functions. eslint: [`prefer-spread`](http://eslint.org/docs/rules/prefer-spread)
+  - [7.14](#functions--spread-vs-apply) <p dir="rtl" align="right">برای صدا زدن توابع variadic از `...` استفاده کنید</p> eslint: [`prefer-spread`](http://eslint.org/docs/rules/prefer-spread)
 
-    > Why? It’s cleaner, you don’t need to supply a context, and you can not easily compose `new` with `apply`.
+    > <p dir="rtl" align="right">چرا؟ زیرا صریح تر است و همچنین نیازی به مراجعه به context نیز همچنین استفاده از `new` و `apply` نیز به راحتی امکان پذیر نیست </p>
 
     ```javascript
-    // bad
+    // بد
     const x = [1, 2, 3, 4, 5];
     console.log.apply(console, x);
 
-    // good
+    // خوب
     const x = [1, 2, 3, 4, 5];
     console.log(...x);
 
-    // bad
+    // بد
     new (Function.prototype.bind.apply(Date, [null, 2016, 8, 5]));
 
-    // good
+    // خوب
     new Date(...[2016, 8, 5]);
     ```
 
   <a name="functions--signature-invocation-indentation"></a>
-  - [7.15](#functions--signature-invocation-indentation) Functions with multiline signatures, or invocations, should be indented just like every other multiline list in this guide: with each item on a line by itself, with a trailing comma on the last item.
+  - [7.15](#functions--signature-invocation-indentation) <p dir="rtl">توابعی که تعریفشان در چندین خط قرار می گیرد نیز شامل حالت تو رفتگی تعریف شده در این راهنما می شوند. یعنی هر آیتم به همراه یک ویرگول در انتهای آیتم در خط مخصوص خودش قرار میگرد.</p>
 
     ```javascript
-    // bad
+    // بد
     function foo(bar,
                  baz,
                  quux) {
       // ...
     }
 
-    // good
+    // خوب
     function foo(
       bar,
       baz,
@@ -892,12 +892,12 @@ Other Style Guides
       // ...
     }
 
-    // bad
+    // بد
     console.log(foo,
       bar,
       baz);
 
-    // good
+    // خوب
     console.log(
       foo,
       bar,
