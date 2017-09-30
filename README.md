@@ -57,9 +57,9 @@ Other Style Guides
   1. [Contributors](#contributors)
   1. [License](#license)
 
-## <span dir="rtl">Types</span>
+## Types
  <a name="types--primitives"></a><a name="1.1"></a>
-  -[1.1](#types--primitives)**نوع های اولیه**: <p dir="rtl">وقتی به نوع های  اولیه دسترسی دارید بر روی مقادیر آنها کار می کنید</p>
+  -[1.1](#types--primitives)**نوع های اولیه**: <p dir="rtl" align="right">وقتی به نوع های  اولیه دسترسی دارید بر روی مقادیر آنها کار می کنید</p>
 
     - `string`
     - `number`
@@ -77,7 +77,7 @@ Other Style Guides
     ```
 
   <a name="types--complex"></a><a name="1.2"></a>
-  - [1.2](#types--complex)  **نوع های پیچیده**: <p dir="rtl">وقتی بر روی نوع های پیچیده دسترسی دارید در واقع بر روی ارجاعی به مقادیر آنها کار می کنید</p>
+  - [1.2](#types--complex)  **نوع های پیچیده**: <p dir="rtl" align="right">وقتی بر روی نوع های پیچیده دسترسی دارید در واقع بر روی ارجاعی به مقادیر آنها کار می کنید</p>
 
     - `object`
     - `array`
@@ -97,9 +97,9 @@ Other Style Guides
 ## References
 
   <a name="references--prefer-const"></a><a name="2.1"></a>
-  - [2.1](#references--prefer-const)<p dir="rtl"> برای ارجاع ها از `const` استفاده کنید و از `var` پرهیز کنید</p> eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
+  - [2.1](#references--prefer-const)<p dir="rtl" align="right"> برای ارجاع ها از `const` استفاده کنید و از `var` پرهیز کنید</p> eslint: [`prefer-const`](http://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign.html)
 
-    ><p dir="rtl">چرا ؟ اینکار باعث می شود که ما نتوانیم ارجاع ها را دوباره مقدار دهی کنیم که از بعضی از خطاها جلوگیری می کند<p>
+    ><p dir="rtl" align="right">چرا ؟ اینکار باعث می شود که ما نتوانیم ارجاع ها را دوباره مقدار دهی کنیم که از بعضی از خطاها جلوگیری می کند<p>
 
     ```javascript
     // بد
@@ -112,9 +112,9 @@ Other Style Guides
     ```
 
   <a name="references--disallow-var"></a><a name="2.2"></a>
-  - [2.2](#references--disallow-var) <p dir="rtl">اگر نیاز است که یک ارجاع را دوباره مقدار دهی کنید از `let` بجای `var` استفاده کنید</p>. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
+  - [2.2](#references--disallow-var) <p dir="rtl" align="right">اگر نیاز است که یک ارجاع را دوباره مقدار دهی کنید از `let` بجای `var` استفاده کنید</p>. eslint: [`no-var`](http://eslint.org/docs/rules/no-var.html) jscs: [`disallowVar`](http://jscs.info/rule/disallowVar)
 
-    > <p dir="rtl">چرا؟ برای اینکه `let` دارای خصوصیت block-scoped است در حالی که `var` دارای خصوصیت function-scoped است</p>
+    > <p dir="rtl" align="right">چرا؟ برای اینکه `let` دارای خصوصیت block-scoped است در حالی که `var` دارای خصوصیت function-scoped است</p>
 
     ```javascript
     // بد
@@ -131,7 +131,7 @@ Other Style Guides
     ```
 
   <a name="references--block-scope"></a><a name="2.3"></a>
-  - [2.3](#references--block-scope)<p dir="rtl">به این نکته باید اشاره کرد که هر دوی `let` و `var` دارای خصوصیت block-scope هستند</p>
+  - [2.3](#references--block-scope)<p dir="rtl" align="right">به این نکته باید اشاره کرد که هر دوی `let` و `var` دارای خصوصیت block-scope هستند</p>
 
     ```javascript
     // فقط در بلاکی که تعریف شده اند وجود دارند
@@ -148,7 +148,7 @@ Other Style Guides
 ## اشیاء
 
   <a name="objects--no-new"></a><a name="3.1"></a>
-  - [3.1](#objects--no-new)<p dir="rtl"> برای ساخت اشیاء از قائده literal استفاده کنید</p> eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html)
+  - [3.1](#objects--no-new)<p dir="rtl" align="right"> برای ساخت اشیاء از قائده literal استفاده کنید</p> eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object.html)
 
     ```javascript
     // بد
@@ -185,7 +185,7 @@ Other Style Guides
     ```
 
   <a name="es6-object-shorthand"></a><a name="3.5"></a>
-  - [3.3](#es6-object-shorthand) <p dir="rtl">در اشیاء از متدهای shorthand استفاده کنید</p> eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
+  - [3.3](#es6-object-shorthand) <p dir="rtl" align="right">در اشیاء از متدهای shorthand استفاده کنید</p> eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
 
     ```javascript
     // بد
@@ -210,7 +210,7 @@ Other Style Guides
   <a name="es6-object-concise"></a><a name="3.6"></a>
   - [3.4](#es6-object-concise) Use property value shorthand. eslint: [`object-shorthand`](http://eslint.org/docs/rules/object-shorthand.html) jscs: [`requireEnhancedObjectLiterals`](http://jscs.info/rule/requireEnhancedObjectLiterals)
 
-    ><p dir="rtl">چرا؟زیرا برای نوشتن کوتاه تر است همچین توصیفی تر نیز است</p>
+    ><p dir="rtl" align="right">چرا؟زیرا برای نوشتن کوتاه تر است همچین توصیفی تر نیز است</p>
 
     ```javascript
     const lukeSkywalker = 'Luke Skywalker';
@@ -227,9 +227,9 @@ Other Style Guides
     ```
 
   <a name="objects--grouped-shorthand"></a><a name="3.7"></a>
-  - [3.5](#objects--grouped-shorthand) <p dir="rtl">خصوصیات shorthand را در اول شی تعریف کنید</p>
+  - [3.5](#objects--grouped-shorthand) <p dir="rtl" align="right">خصوصیات shorthand را در اول شی تعریف کنید</p>
 
-    > <p dir="rtl">چرا؟ زیرا راحت تر است که مشخص کنیم کدام خصوصیت ها از shorthand استفاده کرده اند</p>
+    > <p dir="rtl" align="right">چرا؟ زیرا راحت تر است که مشخص کنیم کدام خصوصیت ها از shorthand استفاده کرده اند</p>
 
     ```javascript
     const anakinSkywalker = 'Anakin Skywalker';
@@ -257,7 +257,7 @@ Other Style Guides
     ```
 
   <a name="objects--quoted-props"></a><a name="3.8"></a>
-  - [3.6](#objects--quoted-props) <p dir="rtl">فقط خصوصیاتی که دارای نام نامعتبر می باشند را در qoute بگذارید</p>. eslint: [`quote-props`](http://eslint.org/docs/rules/quote-props.html) jscs: [`disallowQuotedKeysInObjects`](http://jscs.info/rule/disallowQuotedKeysInObjects)
+  - [3.6](#objects--quoted-props) <p dir="rtl" align="right">فقط خصوصیاتی که دارای نام نامعتبر می باشند را در qoute بگذارید</p>. eslint: [`quote-props`](http://eslint.org/docs/rules/quote-props.html) jscs: [`disallowQuotedKeysInObjects`](http://jscs.info/rule/disallowQuotedKeysInObjects)
 
     > Why? In general we consider it subjectively easier to read. It improves syntax highlighting, and is also more easily optimized by many JS engines.
 
@@ -278,9 +278,9 @@ Other Style Guides
     ```
 
   <a name="objects--prototype-builtins"></a>
-  - [3.7](#objects--prototype-builtins) <p dir="rtl">متد های که در `Object.prototype` وجود دارند مثل `hasOwnProperty`,`propertyIsEnumerable`,`isPrototypeOf` هستند را بصورت مستقیم فراخوانی نکنید</p>
+  - [3.7](#objects--prototype-builtins) <p dir="rtl" align="right">متد های که در `Object.prototype` وجود دارند مثل `hasOwnProperty`,`propertyIsEnumerable`,`isPrototypeOf` هستند را بصورت مستقیم فراخوانی نکنید</p>
 
-    > <p dir="rtl">چرا؟ این متدها ممکن است تحت تاثیر خصوصیات موجود در شی قرار بگیرند .مثلا اگر شی دارای خصوصیتی مثل `{hasOwnProperty:false}` باشد یا یک شی null باشد (`(Object.create(null)`)</p>
+    > <p dir="rtl" align="right">چرا؟ این متدها ممکن است تحت تاثیر خصوصیات موجود در شی قرار بگیرند .مثلا اگر شی دارای خصوصیتی مثل `{hasOwnProperty:false}` باشد یا یک شی null باشد (`(Object.create(null)`)</p>
 
     ```javascript
     // بد
@@ -322,7 +322,7 @@ Other Style Guides
 ## آرایه ها
 
   <a name="arrays--literals"></a><a name="4.1"></a>
-  - [4.1](#arrays--literals) <p dir="rtl">برای ساخت آرایه از قاعده literal استفاده کنید</p> eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor.html)
+  - [4.1](#arrays--literals) <p dir="rtl" align="right">برای ساخت آرایه از قاعده literal استفاده کنید</p> eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor.html)
 
     ```javascript
     // بد
@@ -333,7 +333,7 @@ Other Style Guides
     ```
 
   <a name="arrays--push"></a><a name="4.2"></a>
-  - [4.2](#arrays--push) <p dir="rtl">بجای اینکه مستقیما  آرایه را مقدار دهی کنید از [Array#push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) استفاده کنید</p>
+  - [4.2](#arrays--push) <p dir="rtl" align="right">بجای اینکه مستقیما  آرایه را مقدار دهی کنید از [Array#push](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/push) استفاده کنید</p>
 
     ```javascript
     const someStack = [];
@@ -346,7 +346,7 @@ Other Style Guides
     ```
 
   <a name="es6-array-spreads"></a><a name="4.3"></a>
-  - [4.3](#es6-array-spreads)<p dir="rtl">برای کپی کردن آرایه ها از `...` ( array spreads) استفاده کنید</p>
+  - [4.3](#es6-array-spreads)<p dir="rtl" align="right">برای کپی کردن آرایه ها از `...` ( array spreads) استفاده کنید</p>
 
     ```javascript
     // بد
@@ -363,7 +363,7 @@ Other Style Guides
     ```
 
   <a name="arrays--from"></a><a name="4.4"></a>
-  - [4.4](#arrays--from) <p dir="rtl">برای تبدیل آرایه شبه شی (array-like object) به ارایه بجای استفاده از [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) از `...` استفاده کنید.</p>.
+  - [4.4](#arrays--from) <p dir="rtl" align="right">برای تبدیل آرایه شبه شی (array-like object) به ارایه بجای استفاده از [Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) از `...` استفاده کنید.</p>.
 
     ```javascript
     const foo = document.querySelectorAll('.foo');
@@ -376,7 +376,7 @@ Other Style Guides
     ```
 
   <a name="arrays--mapping"></a>
-  - [4.5](#arrays--mapping) <p dir="rtl">برای map کردن یک آرایه بجای استفاده از `...` از Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) استفاده کنید چرا که باعث می شود از ایجاد یک آرایه میانی جلوگیری کند</p>
+  - [4.5](#arrays--mapping) <p dir="rtl" align="right">برای map کردن یک آرایه بجای استفاده از `...` از Array.from](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/from) استفاده کنید چرا که باعث می شود از ایجاد یک آرایه میانی جلوگیری کند</p>
 
     ```javascript
     // بد
@@ -387,7 +387,7 @@ Other Style Guides
     ```
 
   <a name="arrays--callback-return"></a><a name="4.5"></a>
-  - [4.6](#arrays--callback-return) <p dir="rtl">از `return` در callback متد آرایه استفاده کنید. این کار باعث جلوگیری از side effect می شود. مطالعه بیشتر [8.2](#arrows--implicit-return)</p>. eslint: [`array-callback-return`](http://eslint.org/docs/rules/array-callback-return)
+  - [4.6](#arrays--callback-return) <p dir="rtl" align="right">از `return` در callback متد آرایه استفاده کنید. این کار باعث جلوگیری از side effect می شود. مطالعه بیشتر [8.2](#arrows--implicit-return)</p>. eslint: [`array-callback-return`](http://eslint.org/docs/rules/array-callback-return)
 
     ```javascript
     // خوب
@@ -436,7 +436,7 @@ Other Style Guides
     ```
 
   <a name="arrays--bracket-newline"></a>
-  - [4.7](#arrays--bracket-newline) <p dir="rtl">اگر آرایه دارای چندین خط است می توانید بعد از بازکردن براکت و قبل از بستن براکت یک خط جدید ایجاد کنید</p>
+  - [4.7](#arrays--bracket-newline) <p dir="rtl" align="right">اگر آرایه دارای چندین خط است می توانید بعد از بازکردن براکت و قبل از بستن براکت یک خط جدید ایجاد کنید</p>
 
   ```javascript
   // بد
@@ -477,9 +477,9 @@ Other Style Guides
 ## Destructuring
 
   <a name="destructuring--object"></a><a name="5.1"></a>
-  - [5.1](#destructuring--object)<p dir="rtl"> زمانی که می خواهید به چندین خصوصیت یک شی دسترسی داشته باشید از obect destructuring استفاده کنید</p> jscs: [`requireObjectDestructuring`](http://jscs.info/rule/requireObjectDestructuring)
+  - [5.1](#destructuring--object)<p dir="rtl" align="right"> زمانی که می خواهید به چندین خصوصیت یک شی دسترسی داشته باشید از obect destructuring استفاده کنید</p> jscs: [`requireObjectDestructuring`](http://jscs.info/rule/requireObjectDestructuring)
 
-    > <p dir="rtl">چرا؟ Destructuring باعث می شود دیگر نیاز نباشد برای هر خصوصیت شی یک ارجاع موقتی (متغییر) بسازید</p>
+    > <p dir="rtl" align="right">چرا؟ Destructuring باعث می شود دیگر نیاز نباشد برای هر خصوصیت شی یک ارجاع موقتی (متغییر) بسازید</p>
 
     ```javascript
     // بد
@@ -503,7 +503,7 @@ Other Style Guides
     ```
 
   <a name="destructuring--array"></a><a name="5.2"></a>
-  - [5.2](#destructuring--array) <p dir="rtl">استفاده از destructuring بر روی آرایه ها</p> jscs: [`requireArrayDestructuring`](http://jscs.info/rule/requireArrayDestructuring)
+  - [5.2](#destructuring--array) <p dir="rtl" align="right">استفاده از destructuring بر روی آرایه ها</p> jscs: [`requireArrayDestructuring`](http://jscs.info/rule/requireArrayDestructuring)
 
     ```javascript
     const arr = [1, 2, 3, 4];
@@ -517,9 +517,9 @@ Other Style Guides
     ```
 
   <a name="destructuring--object-over-array"></a><a name="5.3"></a>
-  - [5.3](#destructuring--object-over-array) <p dir="rtl">زمانی که می خواهید چندین مقدار را برگردانید از حالت object destructuring استفاده کنید و از حالت آرایه ای آن یعنی arry destructuring استفاده نکنید<p> jscs: [`disallowArrayDestructuringReturn`](http://jscs.info/rule/disallowArrayDestructuringReturn)
+  - [5.3](#destructuring--object-over-array) <p dir="rtl" align="right">زمانی که می خواهید چندین مقدار را برگردانید از حالت object destructuring استفاده کنید و از حالت آرایه ای آن یعنی arry destructuring استفاده نکنید<p> jscs: [`disallowArrayDestructuringReturn`](http://jscs.info/rule/disallowArrayDestructuringReturn)
 
-    ><p dir="rtl">چرا؟چون به راحتی می توانید خصوصیات جدید اضافه کنید بدون اینکه نگران نظم قرار گیری چیزها باشید چون در آرایه مکان قرارگیری چیزها مهم است و نیاز نیست فراخوان را نیز تغییر دهید</p>
+    ><p dir="rtl" align="right">چرا؟چون به راحتی می توانید خصوصیات جدید اضافه کنید بدون اینکه نگران نظم قرار گیری چیزها باشید چون در آرایه مکان قرارگیری چیزها مهم است و نیاز نیست فراخوان را نیز تغییر دهید</p>
 
     ```javascript
     // بد
@@ -546,7 +546,7 @@ Other Style Guides
 ## رشته ها
 
   <a name="strings--quotes"></a><a name="6.1"></a>
-  - [6.1](#strings--quotes) <p dir="rtl">برای تعریف رشته ها از تک کوتیشن `''` استفاده کنید</p> eslint: [`quotes`](http://eslint.org/docs/rules/quotes.html) jscs: [`validateQuoteMarks`](http://jscs.info/rule/validateQuoteMarks)
+  - [6.1](#strings--quotes) <p dir="rtl" align="right">برای تعریف رشته ها از تک کوتیشن `''` استفاده کنید</p> eslint: [`quotes`](http://eslint.org/docs/rules/quotes.html) jscs: [`validateQuoteMarks`](http://jscs.info/rule/validateQuoteMarks)
 
     ```javascript
     // بد
@@ -560,9 +560,9 @@ Other Style Guides
     ```
 
   <a name="strings--line-length"></a><a name="6.2"></a>
-  - [6.2](#strings--line-length)<p dir="rtl">رشته هایی که بیش از 100 کاراکتر دارند را در چندین خط ننویسید و از الحاق رشته ها استفاده نکنید</p>
+  - [6.2](#strings--line-length)<p dir="rtl" align="right">رشته هایی که بیش از 100 کاراکتر دارند را در چندین خط ننویسید و از الحاق رشته ها استفاده نکنید</p>
 
-    > <p dir="rtl">چرا؟ شکستن رشته باعث می شود خوانایی کدها کم شود</p>
+    > <p dir="rtl" align="right">چرا؟ شکستن رشته باعث می شود خوانایی کدها کم شود</p>
 
     ```javascript
     // بد
@@ -581,9 +581,9 @@ Other Style Guides
     ```
 
   <a name="es6-template-literals"></a><a name="6.4"></a>
-  - [6.3](#es6-template-literals) <p dir="rtl">وقتی که می خواهید بصورت داینامیک و با برنامه نویسی رشته ها را بسازی از تمپلیت ها استفاده کنید و از الحاق رشته پرهیز کنید</p> eslint: [`prefer-template`](http://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing) jscs: [`requireTemplateStrings`](http://jscs.info/rule/requireTemplateStrings)
+  - [6.3](#es6-template-literals) <p dir="rtl" align="right">وقتی که می خواهید بصورت داینامیک و با برنامه نویسی رشته ها را بسازی از تمپلیت ها استفاده کنید و از الحاق رشته پرهیز کنید</p> eslint: [`prefer-template`](http://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing) jscs: [`requireTemplateStrings`](http://jscs.info/rule/requireTemplateStrings)
 
-    ><p dir="rtl">چرا؟ template string ها باعث خوانایی بیشتر و سینتکس خلاصه تر می شود و همچنین قابلیت گنجاندن متغییر ها را به ما می دهد</p>
+    ><p dir="rtl" align="right">چرا؟ template string ها باعث خوانایی بیشتر و سینتکس خلاصه تر می شود و همچنین قابلیت گنجاندن متغییر ها را به ما می دهد</p>
 
     ```javascript
     // بد
@@ -608,12 +608,12 @@ Other Style Guides
     ```
 
   <a name="strings--eval"></a><a name="6.5"></a>
-  - [6.4](#strings--eval)<p dir="rtl">استفاده از `eval()` در رشته ها باعث بوجود آمدن آسیب پذیری های زیادی می شود پس از این تابع استفاده نکنید</p> eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
+  - [6.4](#strings--eval)<p dir="rtl" align="right">استفاده از `eval()` در رشته ها باعث بوجود آمدن آسیب پذیری های زیادی می شود پس از این تابع استفاده نکنید</p> eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
 
   <a name="strings--escaping"></a>
-  - [6.5](#strings--escaping) <p dir="rtl">از escape کردن غیر ضروری کاراکتر ها در رشته ها پرهیز کنید</p> eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
+  - [6.5](#strings--escaping) <p dir="rtl" align="right">از escape کردن غیر ضروری کاراکتر ها در رشته ها پرهیز کنید</p> eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
 
-    > <p dir="rtl">استفاده از بک اسلش باعث کاهش خوانایی کد می شود و فقط وقتی نیاز است از آنها استفاده کنید</p>
+    > <p dir="rtl" align="right">استفاده از بک اسلش باعث کاهش خوانایی کد می شود و فقط وقتی نیاز است از آنها استفاده کنید</p>
 
     ```javascript
     // بد
@@ -629,9 +629,9 @@ Other Style Guides
 ## توابع
 
   <a name="functions--declarations"></a><a name="7.1"></a>
-  - [7.1](#functions--declarations) Use named function expressions instead of function declarations. eslint: [`func-style`](http://eslint.org/docs/rules/func-style) jscs: [`disallowFunctionDeclarations`](http://jscs.info/rule/disallowFunctionDeclarations)
+  - [7.1](#functions--declarations) <p dir="rtl" align="right">بجای تعریف توابع از حالت function name expression ها استفاده کنید<p> eslint: [`func-style`](http://eslint.org/docs/rules/func-style) jscs: [`disallowFunctionDeclarations`](http://jscs.info/rule/disallowFunctionDeclarations)
 
-    > Why? Function declarations are hoisted, which means that it’s easy - too easy - to reference the function before it is defined in the file. This harms readability and maintainability. If you find that a function’s definition is large or complex enough that it is interfering with understanding the rest of the file, then perhaps it’s time to extract it to its own module! Don’t forget to name the expression - anonymous functions can make it harder to locate the problem in an Error’s call stack. ([Discussion](https://github.com/airbnb/javascript/issues/794))
+    > <p dir="rtl" align="right">چرا؟</p> ([Discussion](https://github.com/airbnb/javascript/issues/794))
 
     ```javascript
     // bad
