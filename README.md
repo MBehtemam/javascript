@@ -873,7 +873,7 @@ Other Style Guides
     ```
 
   <a name="functions--signature-invocation-indentation"></a>
-  - [7.15](#functions--signature-invocation-indentation) <p dir="rtl">توابعی که تعریفشان در چندین خط قرار می گیرد نیز شامل حالت تو رفتگی تعریف شده در این راهنما می شوند. یعنی هر آیتم به همراه یک ویرگول در انتهای آیتم در خط مخصوص خودش قرار میگرد.</p>
+  - [7.15](#functions--signature-invocation-indentation) <p dir="rtl" align="right">توابعی که تعریفشان در چندین خط قرار می گیرد نیز شامل حالت تو رفتگی تعریف شده در این راهنما می شوند. یعنی هر آیتم به همراه یک ویرگول در انتهای آیتم در خط مخصوص خودش قرار میگرد.</p>
 
     ```javascript
     // بد
@@ -910,20 +910,20 @@ Other Style Guides
 ## Arrow Functions
 
   <a name="arrows--use-them"></a><a name="8.1"></a>
-  - [8.1](#arrows--use-them) When you must use function expressions (as when passing an anonymous function), use arrow function notation. eslint: [`prefer-arrow-callback`](http://eslint.org/docs/rules/prefer-arrow-callback.html), [`arrow-spacing`](http://eslint.org/docs/rules/arrow-spacing.html) jscs: [`requireArrowFunctions`](http://jscs.info/rule/requireArrowFunctions)
+  - [8.1](#arrows--use-them) <p dir="rtl" align="right">زمانی که باید از function expression ها استفاده کنید بخصوص زمانی که باید یک تابع بدون نام را پاس دهید از arrow function استفاده کنید</p> eslint: [`prefer-arrow-callback`](http://eslint.org/docs/rules/prefer-arrow-callback.html), [`arrow-spacing`](http://eslint.org/docs/rules/arrow-spacing.html) jscs: [`requireArrowFunctions`](http://jscs.info/rule/requireArrowFunctions)
 
-    > Why? It creates a version of the function that executes in the context of `this`, which is usually what you want, and is a more concise syntax.
+    > <p dir="rtl" align="right">چرا؟ به دلیل اینکه یک نسخه از تابعی می سازد که می تواند در context مربوط به `this` اجرا شود که معمولا همان چیزی است که ما می خواهیم و از طرفی کوتاه و مختصرتر نیز هست</p>
 
-    > Why not? If you have a fairly complicated function, you might move that logic out into its own function declaration.
+    > <p dir="rtl" align="right">چرا نه ؟ اگر تابع شما پیچیده و بزرگ است بهتر است که آنرا در یک تابع مخصوص به خودش تعریف کنید</p>
 
     ```javascript
-    // bad
+    // بد
     [1, 2, 3].map(function (x) {
       const y = x + 1;
       return x * y;
     });
 
-    // good
+    // خوب
     [1, 2, 3].map((x) => {
       const y = x + 1;
       return x * y;
@@ -931,32 +931,32 @@ Other Style Guides
     ```
 
   <a name="arrows--implicit-return"></a><a name="8.2"></a>
-  - [8.2](#arrows--implicit-return) If the function body consists of a single statement returning an [expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) without side effects, omit the braces and use the implicit return. Otherwise, keep the braces and use a `return` statement. eslint: [`arrow-parens`](http://eslint.org/docs/rules/arrow-parens.html), [`arrow-body-style`](http://eslint.org/docs/rules/arrow-body-style.html) jscs:  [`disallowParenthesesAroundArrowParam`](http://jscs.info/rule/disallowParenthesesAroundArrowParam), [`requireShorthandArrowFunctions`](http://jscs.info/rule/requireShorthandArrowFunctions)
+  - [8.2](#arrows--implicit-return) <p dir="rtl" align="right">اگر بدنه تابع یک دستور دارد که بدون هیچ side effect ی یک [expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Expressions) بر می گرداند می توانید آکولاد ها را حذف کنید در این صورت دیگر نیازی به return‌هم نیست چرا که خودش return‌می کند در غیر این صورت از آکولاد به همراه return استفاده کنید</p> eslint: [`arrow-parens`](http://eslint.org/docs/rules/arrow-parens.html), [`arrow-body-style`](http://eslint.org/docs/rules/arrow-body-style.html) jscs:  [`disallowParenthesesAroundArrowParam`](http://jscs.info/rule/disallowParenthesesAroundArrowParam), [`requireShorthandArrowFunctions`](http://jscs.info/rule/requireShorthandArrowFunctions)
 
-    > Why? Syntactic sugar. It reads well when multiple functions are chained together.
+    > <p dir="rtl" align="right">چرا؟ چون  Syntactic sugar است . یعنی خواندن و درکش بسیار راحت است </p>
 
     ```javascript
-    // bad
+    // بد
     [1, 2, 3].map(number => {
       const nextNumber = number + 1;
       `A string containing the ${nextNumber}.`;
     });
 
-    // good
+    // خوب
     [1, 2, 3].map(number => `A string containing the ${number}.`);
 
-    // good
+    // خوب
     [1, 2, 3].map((number) => {
       const nextNumber = number + 1;
       return `A string containing the ${nextNumber}.`;
     });
 
-    // good
+    // خوب
     [1, 2, 3].map((number, index) => ({
       [index]: number,
     }));
 
-    // No implicit return with side effects
+    // دچار ساید افکت شده است
     function foo(callback) {
       const val = callback();
       if (val === true) {
@@ -966,29 +966,29 @@ Other Style Guides
 
     let bool = false;
 
-    // bad
+    // badبد
     foo(() => bool = true);
 
-    // good
+    // خوب
     foo(() => {
       bool = true;
     });
     ```
 
   <a name="arrows--paren-wrap"></a><a name="8.3"></a>
-  - [8.3](#arrows--paren-wrap) In case the expression spans over multiple lines, wrap it in parentheses for better readability.
+  - [8.3](#arrows--paren-wrap) <p dir="rtl" align="right">اگر expression‌تابع در چند خط قرار می گیرد آنها را برای خوانایی بهتر در پرانتز قرار دهید</p>
 
-    > Why? It shows clearly where the function starts and ends.
+    > <p dir="rtl" align="right">چرا ؟ زیرا به وضوح شروع و پایان تابع را نشان می دهد</p>
 
     ```javascript
-    // bad
+    // بد
     ['get', 'post', 'put'].map(httpMethod => Object.prototype.hasOwnProperty.call(
         httpMagicObjectWithAVeryLongName,
         httpMethod,
       )
     );
 
-    // good
+    // خوب
     ['get', 'post', 'put'].map(httpMethod => (
       Object.prototype.hasOwnProperty.call(
         httpMagicObjectWithAVeryLongName,
@@ -998,29 +998,31 @@ Other Style Guides
     ```
 
   <a name="arrows--one-arg-parens"></a><a name="8.4"></a>
-  - [8.4](#arrows--one-arg-parens) If your function takes a single argument and doesn’t use braces, omit the parentheses. Otherwise, always include parentheses around arguments for clarity and consistency. Note: it is also acceptable to always use parentheses, in which case use the [“always” option](http://eslint.org/docs/rules/arrow-parens#always) for eslint or do not include [`disallowParenthesesAroundArrowParam`](http://jscs.info/rule/disallowParenthesesAroundArrowParam) for jscs. eslint: [`arrow-parens`](http://eslint.org/docs/rules/arrow-parens.html) jscs:  [`disallowParenthesesAroundArrowParam`](http://jscs.info/rule/disallowParenthesesAroundArrowParam)
+  - [8.4](#arrows--one-arg-parens) <p dir="rtl" align="right">اگر تابع فقط دارای یک آرگومان است از آکولاد و پرانتز استفاده نکنید در غیر این صورت همیشه از پرانتز برای آرگومان ها استفاده کنید . البته به این نکته باید اشاره کرد که همیشه استفاده از پرانتز قابل قبول است البته در این شرایط می توانید از [“always” option](http://eslint.org/docs/rules/arrow-parens#always) برای eslint استفاده کنید 
+  یا [`disallowParenthesesAroundArrowParam`](http://jscs.info/rule/disallowParenthesesAroundArrowParam) را در jsc قرار ندهید
+  </p> eslint: [`arrow-parens`](http://eslint.org/docs/rules/arrow-parens.html) jscs:  [`disallowParenthesesAroundArrowParam`](http://jscs.info/rule/disallowParenthesesAroundArrowParam)
 
-    > Why? Less visual clutter.
+    > <p dir="rtl" align="right">چرا؟ چون باعث در هم ریختی گمتری در کد ها می شود</p>
 
     ```javascript
-    // bad
+    // بد
     [1, 2, 3].map((x) => x * x);
 
-    // good
+    // خوب
     [1, 2, 3].map(x => x * x);
 
-    // good
+    // خوب
     [1, 2, 3].map(number => (
       `A long string with the ${number}. It’s so long that we don’t want it to take up space on the .map line!`
     ));
 
-    // bad
+    // بد
     [1, 2, 3].map(x => {
       const y = x + 1;
       return x * y;
     });
 
-    // good
+    // خوب
     [1, 2, 3].map((x) => {
       const y = x + 1;
       return x * y;
@@ -1028,19 +1030,19 @@ Other Style Guides
     ```
 
   <a name="arrows--confusing"></a><a name="8.5"></a>
-  - [8.5](#arrows--confusing) Avoid confusing arrow function syntax (`=>`) with comparison operators (`<=`, `>=`). eslint: [`no-confusing-arrow`](http://eslint.org/docs/rules/no-confusing-arrow)
+  - [8.5](#arrows--confusing) <p dir="rtl" align="right">مراقب باشید که سینتکس arrow function‌ها یعنی `=>` با عمرگر های مقایسه ای یعنی `<=` و `>=` اشتباه نگیرید</p> eslint: [`no-confusing-arrow`](http://eslint.org/docs/rules/no-confusing-arrow)
 
     ```javascript
-    // bad
+    // بد
     const itemHeight = item => item.height > 256 ? item.largeSize : item.smallSize;
 
-    // bad
+    // بذ
     const itemHeight = (item) => item.height > 256 ? item.largeSize : item.smallSize;
 
-    // good
+    // خوب
     const itemHeight = item => (item.height > 256 ? item.largeSize : item.smallSize);
 
-    // good
+    // خوب
     const itemHeight = (item) => {
       const { height, largeSize, smallSize } = item;
       return height > 256 ? largeSize : smallSize;
